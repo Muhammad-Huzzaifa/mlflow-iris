@@ -1,8 +1,11 @@
+import os
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import confusion_matrix
 
 def plot_confusion_matrix(y_test, y_pred, name):
+
+    os.makedirs("artifacts", exist_ok=True)
 
     cm = confusion_matrix(y_test, y_pred)
     
@@ -19,6 +22,8 @@ def plot_confusion_matrix(y_test, y_pred, name):
     return path
 
 def plot_model_comparison(metrics):
+
+    os.makedirs("artifacts", exist_ok=True)
 
     names = list(metrics.keys())
     scores = list(metrics.values())

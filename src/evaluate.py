@@ -7,4 +7,4 @@ def evaluate_model(model, X_test, y_test):
     accuracy = accuracy_score(y_test, y_pred)
     f1 = f1_score(y_test, y_pred, average='weighted')
 
-    return accuracy, f1
+    return accuracy, f1, y_pred
